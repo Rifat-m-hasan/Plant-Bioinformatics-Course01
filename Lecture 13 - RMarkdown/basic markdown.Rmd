@@ -1,0 +1,138 @@
+---
+title: "Basic Introduction of RMarkdown"
+author: "Mahmudul Hasan Rifat"
+date: "8/7/2021"
+output: html_document
+---
+
+## 1st line oof code
+
+Describe about your project
+
+```{r echo=TRUE} 
+
+library(dplyr)
+mt <- as_tibble(mtcars)
+
+mt
+
+```
+
+plain Text
+
+*italics* and **bold**
+
+
+`verbatim code`
+
+
+sub/superscript^2^~2~
+
+
+~~strike through~~
+
+
+escaped: \* \_ \\
+
+
+endash: --, 
+emdash: ---
+
+
+equation: $A = \pi*r^{2}$
+
+Area of triangle: $Area = 1/2 * Base * hight$
+
+
+equation block:
+
+$$E = mc^{2}$$
+
+> block quote
+Honesty is the best policy
+
+
+# Header1 
+## Header 2 
+### Header 3 
+#### Header 4
+##### Header 5
+###### Header 6
+
+<!--Text comment: it will  not show in the web page -->
+
+\textbf{Text ignored in HTML}
+
+
+<em>HTML ignored in pdfs</em>
+
+
+<http://www.rstudio.com>
+
+<http://www.youtube.com>
+
+
+[link](www.rstudio.com)
+
+[YouTube](www.youtube.com)
+
+
+image:
+![](C:\Users\hbshi\Downloads\Pic\Default_SPU_Interaction.png)
+
+* unordered list
+  + sub-item 1
+  + sub-item 2
+    - sub-sub-item 1
+* item 2 Continued
+
+1. ordered list
+2. item 2
+  i) sub-item 1
+    A. sub-sub-item 1
+
+
+    
+(@) A list whose numberingcontinues afer
+(@) an interruption
+
+
+
+Force
+: 1kg weight gain 1ms~-2~
+
+
+
+
+
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+| 12 | 12 | 12 | 12 |
+| 123 | 123 | 123 | 123 |
+| 1 | 1 | 1 | 1 |
+
+
+| Week | Afrin | Nasrin |
+|-------:|:-----:|:-------|
+|1 | 8 | 9 |
+|2 | 9 | 8 |
+| 3 | 8 | *@#$ 8 |
+
+
+
+
+
+- slide bullet 1
+
+- slide bullet 2
+
+
+horizontal rule/slide break:
+
+***
+
+A footnote [^1]
+
+[^1]: Here is the footnote.
+
+

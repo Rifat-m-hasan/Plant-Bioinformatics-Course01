@@ -1,0 +1,118 @@
+---
+title: "Basic R Markdown"
+author: "Mahmudul Hasan Rifat"
+date: "8/7/2021"
+output: html_document
+---
+
+1. collapse - collapse all output into single block (default = FALSE) 
+
+2. echo - Display code in output document (default = TRUE) 
+
+3. fig.align - This code align your figure in the document in 'left', 'right', or 'center' (default = 'default') 
+
+4. fig.cap - figure caption as character string (default = NULL) 
+
+5. fig.height, fig.width - Dimensions of plots in inches
+
+
+
+# Lets modify our writting
+
+Plain text
+
+
+End a line with two spaces     to start a new paragraph.
+
+
+*italics* and **bold**
+
+
+`verbatim code`
+
+
+sub/superscript^2^~2~
+
+
+~~strikethrough~~
+
+
+escaped: \* \_ \\
+
+
+endash: --, emdash: ---
+
+
+equation: $A = \pi*r^{2}$
+
+
+equation block:
+
+$$E = mc^{2}$$
+
+> block quote
+
+
+# Header1 
+## Header 2 
+### Header 3 
+#### Header 4
+##### Header 5
+###### Header 6
+
+<!--Text comment-->
+
+\textbf{Tex ignored in HTML}
+
+
+<em>HTML ignored in pdfs</em>
+
+
+<http://www.rstudio.com>
+
+
+[link](www.rstudio.com)
+
+
+image:
+![](C:\Users\hbshi\Downloads\Pic\Default_SPU_Interaction.png)
+
+* unordered list
+  + sub-item 1
+  + sub-item 2
+    - sub-sub-item 1
+* item 2 Continued
+
+1. ordered list
+2. item 2
+  i) sub-item 1
+    A. sub-sub-item 1
+    
+(@) A list whose numberingcontinues afer
+(@) an interruption
+
+Term 1
+: Definition 1
+
+
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+| 12 | 12 | 12 | 12 |
+| 123 | 123 | 123 | 123 |
+| 1 | 1 | 1 | 1 |
+
+
+- slide bullet 1
+
+- slide bullet 2
+
+
+horizontal rule/slide break:
+
+***
+
+A footnote [^1]
+
+[^1]: Here is the footnote. 
+
+

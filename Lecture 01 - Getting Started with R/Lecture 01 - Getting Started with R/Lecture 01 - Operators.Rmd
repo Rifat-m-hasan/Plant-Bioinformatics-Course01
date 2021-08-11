@@ -1,0 +1,151 @@
+---
+title: "Lecture 01 - Operators"
+author: "Mahmudul Hasan Rifat"
+date: "7/10/2021"
+output: html_document
+---
+
+An operator is a symbol that tells the compiler to perform specific mathematical or logical manipulations. R language is rich in built-in operators and provides following types of operators.
+
+## Types of Operators
+
+We have the following types of operators in R programming −
+
+## Arithmetic Operators
+
+* Relational Operators
+* Logical Operators
+* Assignment Operators
+* Miscellaneous Operators
+* Arithmetic Operators
+
+Following table shows the arithmetic operators supported by R language. The operators act on each element of the vector.
+
+```{r echo=FALSE}
+a <- matrix(NA, nrow = 7, ncol = 2)
+colnames(a) <- c("Operator","Description")
+a[,1] <- c("+","-","*","/","%%","%/%","^")
+a[,2] <- c("Adds two vectors","Subtracts second vector from the first","	Multiplies both vectors","Divide the first vector with the second","Give the remainder of the first vector with the second","The result of division of first vector with second (quotient)","The first vector raised to the exponent of second vector")
+
+knitr::kable(a, "pipe")
+```
+
+
+#### Example
+
+```{r}
+# Addition
+v <- c( 2,5.5,6)
+t <- c(8, 3, 4)
+print(v+t)
+
+# Subtract
+v <- c( 2,5.5,6)
+t <- c(8, 3, 4)
+print(v-t)
+
+v <- c( 2,5.5,6)
+t <- c(8, 3, 4)
+print(v*t)
+
+v <- c( 2,5.5,6)
+t <- c(8, 3, 4)
+print(v/t)
+
+v <- c( 2,5.5,6)
+t <- c(8, 3, 4)
+print(v%%t)
+
+v <- c( 2,5.5,6)
+t <- c(8, 3, 4)
+print(v%/%t)
+
+v <- c( 2,5.5,6)
+t <- c(8, 3, 4)
+print(v^t)
+```
+
+## Relational Operators
+
+Following table shows the relational operators supported by R language. Each element of the first vector is compared with the corresponding element of the second vector. The result of comparison is a Boolean value.
+
+```{r echo=FALSE}
+b <- matrix(NA, nrow = 6, ncol = 2)
+colnames(b) <- c("Operator","Description")
+b[,1] <- c(">","<","==","<=",">=","!=")
+b[,2] <- c("Checks if each element of the first vector is greater than the corresponding element of the second vector.","Checks if each element of the first vector is less than the corresponding element of the second vector.","Checks if each element of the first vector is equal to the corresponding element of the second vector.","	Checks if each element of the first vector is less than or equal to the corresponding element of the second vector.","Checks if each element of the first vector is greater than or equal to the corresponding element of the second vector.","Checks if each element of the first vector is unequal to the corresponding element of the second vector.")
+
+knitr::kable(b, "pipe")
+```
+
+
+```{r}
+v <- c(2,5.5,6,9)
+t <- c(8,2.5,14,9)
+print(v>t)
+
+v <- c(2,5.5,6,9)
+t <- c(8,2.5,14,9)
+print(v < t)
+
+v <- c(2,5.5,6,9)
+t <- c(8,2.5,14,9)
+print(v == t)
+
+v <- c(2,5.5,6,9)
+t <- c(8,2.5,14,9)
+print(v<=t)
+
+v <- c(2,5.5,6,9)
+t <- c(8,2.5,14,9)
+print(v>=t)
+
+v <- c(2,5.5,6,9)
+t <- c(8,2.5,14,9)
+print(v!=t)
+```
+
+
+
+## Logical Operators
+
+Following table shows the logical operators supported by R language. It is applicable only to vectors of type logical, numeric or complex. All numbers greater than 1 are considered as logical value TRUE.
+
+Each element of the first vector is compared with the corresponding element of the second vector. The result of comparison is a Boolean value.
+
+-- The logical operator && and || considers only the first element of the vectors and give a vector of single element as output.
+
+```{r echo=FALSE}
+c <- matrix(NA, nrow = 5, ncol = 2)
+colnames(c) <- c("Operator","Description")
+c[,1] <- c("&","|","!","&&","||")
+c[,2] <- c("It is called Element-wise Logical AND operator. It combines each element of the first vector with the corresponding element of the second vector and gives a output TRUE if both the elements are TRUE.","It is called Element-wise Logical OR operator. It combines each element of the first vector with the corresponding element of the second vector and gives a output TRUE if one the elements is TRUE.","It is called Logical NOT operator. Takes each element of the vector and gives the opposite logical value.","Called Logical AND operator. Takes first element of both the vectors and gives the TRUE only if both are TRUE.", "	Called Logical OR operator. Takes first element of both the vectors and gives the TRUE if one of them is TRUE.")
+
+knitr::kable(c, "pipe")
+```
+
+```{r}
+v <- c(3,1,TRUE,2+3i)
+t <- c(4,1,FALSE,2+3i)
+print(v&t)
+
+v <- c(3,0,TRUE,2+2i)
+t <- c(4,0,FALSE,2+3i)
+print(v|t)
+
+v <- c(3,0,TRUE,2+2i)
+print(!v)
+
+v <- c(3,0,TRUE,2+2i)
+t <- c(1,3,TRUE,2+3i)
+print(v&&t)
+
+v <- c(0,0,TRUE,2+2i)
+t <- c(0,3,TRUE,2+3i)
+print(v||t)
+```
+
+
+
+
+

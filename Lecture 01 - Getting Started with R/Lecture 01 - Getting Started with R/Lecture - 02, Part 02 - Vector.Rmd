@@ -1,0 +1,74 @@
+---
+title: "Lecture - 01 | Topic 02 - Vectors"
+author: "Mahmudul Hasan Rifat"
+date: "7/10/2021"
+output: html_document
+---
+
+## Ours Visualization
+
+#### 1. Data Understanding
+
+what you interpate
+
+library
+```{r echo=TRUE}
+library(tidyverse)
+```
+
+
+>Actual code
+
+```{r}
+A<-diamonds
+
+str(A)
+
+summary(A)
+
+```
+
+#### 2. Visualization
+
+What you want to describe by figure. make your comment here
+
+
+```{r}
+A|>
+  filter(price>=15000 & price<=15100)|>
+  ggplot()+ aes(x=carat,
+                y=price,
+                colour=cut,
+                size=clarity)+
+  geom_point(shape="diamond open")+
+  facet_wrap(vars(cut),
+             scales="free")+
+  scale_x_continuous(trans = "log10")+
+  labs(x="Carat of Diamond",
+       y="Price of Diamond", 
+       title = "Diamond dataset",
+       subtitle = "This is done with geom_point",
+       caption = "It is going to be ok")+
+  theme_classic()+
+  theme(legend.position="right",
+        plot.title = element_text(size=20L,
+                                  colour = "#CD5C5C",
+                                  hjust=.5),
+        plot.subtitle = element_text(size=10L,
+                                     colour="#483D8B",
+                                     face="bold"),
+        plot.caption = element_text(size = 10L,
+                                    colour="#BA55D3",
+                                    face = "italic",
+                                    hjust = 1),
+        axis.title.y = element_text(size=10L,
+                                    face="bold"),
+        axis.title.x = element_text(size=10L,
+                                    face="bold"))
+
+```
+
+
+
+
+
